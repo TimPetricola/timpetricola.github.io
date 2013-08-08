@@ -13,3 +13,10 @@
     @content
   ::-moz-selection
     @content
+
+=animation($animation, $duration, $delay: false, $fill-mode: forwards)
+  +experimental(animation, $animation)
+  +experimental(animation-fill-mode, $fill-mode)
+  +experimental(animation-duration, $duration)
+  @if $delay != false
+    +experimental(animation-delay, $delay)

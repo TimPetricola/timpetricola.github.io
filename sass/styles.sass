@@ -60,9 +60,7 @@ a
   text-indent: -9999px
   position: relative
   +transition(all .2s linear)
-  -webkit-animation: smoothScale ease-in 1
-  -webkit-animation-fill-mode: forwards
-  -webkit-animation-duration: .4s
+  +animation(smoothScale ease-in 1, .4s)
   background:
     size: 200px
     image: url('http://0.gravatar.com/avatar/cba30c54e9e7b14bfad4e593856a9ecb?s=200')
@@ -108,7 +106,4 @@ a
 
 .content
   opacity: 0
-  -webkit-animation: smoothTranslate ease-in 1
-  -webkit-animation-fill-mode: forwards
-  -webkit-animation-duration: .3s
-  -webkit-animation-delay: .6s
+  +animation(smoothTranslate ease-in 1, .3s, .6s)

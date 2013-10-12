@@ -63,10 +63,16 @@ a
   +transition(all .2s linear)
   // +animation(smoothScale ease-in 1, .4s)
   background:
-    size: 200px
+    size: cover
+    position: center
     image: url('http://0.gravatar.com/avatar/cba30c54e9e7b14bfad4e593856a9ecb?s=200')
+  
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
     background-image: url('http://0.gravatar.com/avatar/cba30c54e9e7b14bfad4e593856a9ecb?s=400')
+
+  +breakpoint(mobile)
+    width: 120px
+    height: 120px
 
   &::after
     content: ''

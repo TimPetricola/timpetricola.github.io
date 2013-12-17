@@ -1,25 +1,8 @@
-=keyframes($name)
-  @-webkit-keyframes #{$name}
-    @content
-  @-moz-keyframes #{$name}
-    @content
-  @-ms-keyframes #{$name}
-    @content
-  @keyframes #{$name}
-    @content
-
 =selection
   ::selection
     @content
   ::-moz-selection
     @content
-
-=animation($animation, $duration, $delay: false, $fill-mode: forwards)
-  +experimental(animation, $animation)
-  +experimental(animation-fill-mode, $fill-mode)
-  +experimental(animation-duration, $duration)
-  @if $delay != false
-    +experimental(animation-delay, $delay)
 
 =breakpoint($point)
   @if $point == mobile

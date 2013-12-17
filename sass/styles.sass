@@ -40,7 +40,8 @@ a
 
   &:hover
     outline: none
-    color: $brand-color
+    color: darken($color, 10%)
+    border-color: $brand-color
 
 .container
   padding: 0 16px
@@ -59,7 +60,7 @@ a
   direction: ltr
   text-indent: -9999px
   position: relative
-  +transition(all .2s linear)
+  +transition(all .16s ease-in-out)
   background:
     size: cover
     position: center
@@ -98,13 +99,12 @@ a
   a
     color: inherit
     text-decoration: none
-    border: 4px solid #eee
+    border: 2px solid #eee
     padding: 8px 16px
     border-radius: 32px
     margin: 0 2px
-    +transition(all .1s)
+    +transition(all .16s ease-in-out)
 
     &:hover
-      background-color: $brand-color
       border-color: $brand-color
-      color: #fff
+      color: $brand-color

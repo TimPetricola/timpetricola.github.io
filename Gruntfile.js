@@ -3,7 +3,15 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     compass: {
-      dist: {}
+      dist: {
+        options: {
+          sassDir: 'sass',
+          cssDir: 'stylesheets',
+          environment: 'production',
+          outputStyle: 'compressed',
+          noLineComments: true
+        }
+      }
     },
 
     watch: {

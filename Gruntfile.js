@@ -7,6 +7,9 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      options: {
+        livereload: true,
+      },
       css: {
         files : ['sass/*.sass'],
         tasks: ['compass'],

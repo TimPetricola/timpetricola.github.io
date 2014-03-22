@@ -3,7 +3,7 @@ var gulp    = require('gulp'),
     rename  = require('gulp-rename');
 
 var config = {
-  sassSrc: 'sass/styles.scss',
+  sassSrc: 'sass/**.scss',
   cssDest: 'stylesheets',
 };
 

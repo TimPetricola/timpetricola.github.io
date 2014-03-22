@@ -1,7 +1,7 @@
 @import 'compass'
 
-$color: #3a3a3a
-$back-color: #fcfcfc
+$color: #464749
+$back-color: white
 $brand-color: #27aadd
 
 $height-breakpoint: 320px
@@ -25,11 +25,15 @@ html
   font: 1em/1.5 serif
 
 body
-  font-family: Ubuntu, sans-serif
+  font-family: Georgia,Cambria,"Times New Roman",Times,serif
   font-weight: 300
   color: $color
   background-color: $back-color
-  padding: 16px 0
+  font-size: 18px
+  line-height: 1.5
+  padding: 32px 16px
+
+  @extend %ghost-vertical-align
   text-align: center
 
 a
@@ -43,68 +47,14 @@ a
     color: darken($color, 10%)
     border-color: $brand-color
 
+p
+  margin-bottom: 27px
+
 .container
   padding: 0 16px
-  @media (min-height: $height-breakpoint+2*$body-padding)
-    position: absolute
-    top: 50%
-    margin-top: -$height-breakpoint/2
-    width: 100%
-
-.profile
-  width: 200px
-  height: 200px
-  border-radius: 50%
-  overflow: hidden
+  width: 580px
+  max-width: 100%
+  margin: auto
   display: inline-block
-  direction: ltr
-  text-indent: -9999px
-  position: relative
-  +transition(all .16s ease-in-out)
-  background:
-    size: cover
-    position: center
-    image: url('http://0.gravatar.com/avatar/cba30c54e9e7b14bfad4e593856a9ecb?s=200')
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-    background-image: url('http://0.gravatar.com/avatar/cba30c54e9e7b14bfad4e593856a9ecb?s=400')
-
-  +breakpoint(mobile)
-    width: 120px
-    height: 120px
-
-  &::after
-    content: ''
-    position: absolute
-    top: 4px
-    right: 4px
-    bottom: 4px
-    left: 4px
-    border-radius: 50%
-    border: 4px solid #fff
-
-  &:hover
-    box-shadow: inset 0 0 0 8px $brand-color
-
-.page-title
-  font-size: 32px
-  margin: 16px 0
-
-.social-links
-  margin-top: 32px
-
-  li
-    display: inline-block
-
-  a
-    color: inherit
-    text-decoration: none
-    border: 2px solid #eee
-    padding: 8px 16px
-    border-radius: 32px
-    margin: 0 2px
-    +transition(all .16s ease-in-out)
-
-    &:hover
-      border-color: $brand-color
-      color: $brand-color
+  vertical-align: middle
+  text-align: left

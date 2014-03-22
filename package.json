@@ -2,8 +2,7 @@
   "name": "timpetricola",
   "version": "0.1.0",
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-compass": "~0.7.0",
-    "grunt-contrib-watch": "0.5.3"
+    "gulp-ruby-sass": "~0.4.0",
+    "gulp-compass": "~1.1.6"
   }
 }

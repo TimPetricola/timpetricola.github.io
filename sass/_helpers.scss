@@ -1,0 +1,23 @@
+@mixin selection {
+  ::selection {
+    @content;
+  }
+  ::-moz-selection {
+    @content;
+  }
+}
+
+@mixin ghost-vertical-align {
+  background-color: red;
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    margin-right: -.25em;
+  }
+}
+
+%ghost-vertical-align {
+  @include ghost-vertical-align;
+}

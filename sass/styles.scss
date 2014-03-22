@@ -24,7 +24,7 @@ body {
   background-color: $color-back;
   font-size: $font-size;
   line-height: $line-height;
-  padding: $bu*2 $bu;
+  padding: $bu*2 $bu*2;
 
   @extend %ghost-vertical-align;
   text-align: center;

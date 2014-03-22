@@ -1,25 +1,33 @@
 var gulp    = require('gulp'),
-    compass = require('gulp-compass');
+    sass    = require('gulp-ruby-sass');
+    rename  = require('gulp-rename');
 
 var config = {
-  sassDir:     'sass',
-  sassSources: 'sass/*.scss',
-  cssDest:     'stylesheets'
+  sassSrc: 'sass/styles.scss',
+  cssDest: 'stylesheets',
 };
 
-gulp.task('compass', function() {
-  gulp.src(config.sassSources)
-    .pipe(compass({
-        css:     config.cssDest,
-        sass:    config.sassDir,
-        style:   'compressed',
-        comments: false
+gulp.task('sass', function() {
+  gulp.src(config.sassSrc)
+    .pipe(sass({
+      compass: true,
+      style: 'compressed'
+    }))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest(config.cssDest));
+
+  gulp.src(config.sassSrc)
+    .pipe(sass({
+      compass: true,
+      style: 'nested'
     }))
     .pipe(gulp.dest(config.cssDest));
 });
 
 gulp.task('watch', function() {
-  gulp.watch(config.sassSources, ['compass']);
+  gulp.watch(config.sassSrc, ['sass']);
 });
 
 gulp.task('default', ['watch']);

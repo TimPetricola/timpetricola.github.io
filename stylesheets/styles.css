@@ -1,11 +1,9 @@
-body {
-  background-color: red; }
-  body:before {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-    margin-right: -.25em; }
+body:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  margin-right: -.25em; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,

@@ -8,7 +8,6 @@
 }
 
 @mixin ghost-vertical-align {
-  background-color: red;
   &:before {
     content: '';
     display: inline-block;

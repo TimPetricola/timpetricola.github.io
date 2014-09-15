@@ -2,7 +2,8 @@
   "name": "timpetricola",
   "version": "0.1.0",
   "devDependencies": {
-    "gulp-ruby-sass": "~0.4.0",
-    "gulp-rename": "~1.2.0"
+    "gulp": "^3.8.8",
+    "gulp-rename": "~1.2.0",
+    "gulp-ruby-sass": "~0.4.0"
   }
 }

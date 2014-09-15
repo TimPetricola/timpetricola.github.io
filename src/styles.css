@@ -48,13 +48,13 @@ table {
   --color-selection: #fff;
   --color-selection-back: #27aadd;
 
-  --base-unit: 16px;
+  --base-unit: .8em;
   --bu: var(--base-unit);
   --bu-double: calc(var(--base-unit) * 2);
 
   --font-face: Georgia, Cambria, "Times New Roman", Times, serif;
   --font-size: 20px;
-  --line-width: 580px;
+  --line-width: 29em;
   --line-height: 1.5;
 };
 

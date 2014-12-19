@@ -6,12 +6,14 @@ var gulp         = require('gulp'),
 gulp.task('css', function() {
   gulp.src('src/styles.css')
     .pipe(myth())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .on('end', function() {
+      gulp.src('dist/styles.css')
+        .pipe(minifyCSS())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('dist'));
+    });
 
-  gulp.src('dist/styles.css')
-    .pipe(minifyCSS())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() {

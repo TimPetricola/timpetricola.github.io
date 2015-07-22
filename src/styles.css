@@ -42,21 +42,22 @@ table {
 }
 
 :root {
-  --color-base: #464749;
+  --color-base: #5b5c5f;
   --color-back: #fff;
-  --color-brand: #27aadd;
+  --color-brand: #2f98c1;
   --color-selection: #fff;
   --color-selection-back: #27aadd;
   --color-link-underline: color(var(--color-base) l(+30%));
 
   --base-unit: .8em;
   --bu: var(--base-unit);
+  --bu-one-half: calc(var(--base-unit) * 1.5);
   --bu-double: calc(var(--base-unit) * 2);
 
-  --font-face: Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-size: 20px;
-  --line-width: 29em;
-  --line-height: 1.5;
+  --font-face: "Open Sans", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  --font-size: 18px;
+  --line-width: 33em;
+  --line-height: 1.6;
 }
 
 ::selection {
@@ -64,7 +65,14 @@ table {
   color: var(--color-selection);
 }
 
-html, body {
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
   height: 100%;
 }
 
@@ -76,7 +84,7 @@ body {
   line-height: var(--line-height);
   padding: var(--bu-double) var(--bu-double);
   text-align: center;
-  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
   body:before {
     content: '';
@@ -89,24 +97,48 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  background-image: linear-gradient(color(var(--color-link-underline) alpha(.25)) 0%, var(--color-link-underline) 100%);
-  background-repeat: repeat-x;
-  background-size: 1px 1px;
-  background-position: 0 95%;
-  text-shadow: 3px 0 #fff, 2px 0 #fff, 1px 0 #fff, -1px 0 #fff, -2px 0 #fff, -3px 0 #fff;
+  border-bottom: 2px solid color(var(--color-base) tint(90%));
+  transition: color .2s, border-color .2s;
 }
   a:hover {
     outline: none;
-    color: color(var(--color-base) shade(10%));
+    color: color(var(--color-base) shade(40%));
     border-color: var(--color-brand;)
   }
 
-  a::selection, a > *::selection {
+  a::selection,
+  a > *::selection {
     text-shadow: none;
   }
 
 p {
-  margin-bottom: var(--bu-double);
+  margin-bottom: var(--bu);
+}
+
+strong {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+  margin-top: var(--bu-double);
+  margin-bottom: var(--bu);
+}
+
+ul {
+  padding-left: var(--bu-double);
+}
+
+li {
+  margin-bottom: var(--bu);
+  list-style-type: disc;
+
+}
+
+li a {
+  border-bottom: 0;
+  font-weight: bold;
+  color: var(--color-brand);
 }
 
 .container {

@@ -2,7 +2,7 @@
   "name": "timpetricola",
   "version": "0.1.0",
   "devDependencies": {
-    "gulp": "^3.8.8",
+    "gulp": "^4.0.0",
     "gulp-minify-css": "^0.3.8",
     "gulp-myth": "^1.0.1",
     "gulp-rename": "~1.2.0"

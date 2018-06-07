@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -141,7 +141,6 @@ table {
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -151,7 +150,8 @@ body {
 }
 
 body {
-  font-family: "Open Sans", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   color: #5b5c5f;
   background-color: #fff;
   font-size: 18px;
@@ -162,19 +162,18 @@ body {
 }
 
 body:before {
-  content: '';
+  content: "";
   display: inline-block;
   vertical-align: middle;
   height: 100%;
-  margin-right: -.25em;
+  margin-right: -0.25em;
 }
 
 a {
   color: inherit;
   text-decoration: none;
   border-bottom: 2px solid rgb(239, 239, 239);
-  -webkit-transition: color .2s, border-color .2s;
-  transition: color .2s, border-color .2s;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 a:hover {
@@ -194,7 +193,7 @@ a > *::selection {
 }
 
 p {
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
 
 strong {
@@ -204,7 +203,7 @@ strong {
 h2 {
   font-weight: bold;
   margin-top: 1.6em;
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
 }
 
 ul {
@@ -212,7 +211,7 @@ ul {
 }
 
 li {
-  margin-bottom: .8em;
+  margin-bottom: 0.8em;
   list-style-type: disc;
 }
 

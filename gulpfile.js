@@ -1,6 +1,6 @@
 var gulp = require("gulp"),
   myth = require("gulp-myth"),
-  minifyCSS = require("gulp-minify-css"),
+  cleanCSS = require("gulp-clean-css"),
   rename = require("gulp-rename");
 
 gulp.task("css", function() {
@@ -11,7 +11,7 @@ gulp.task("css", function() {
     .on("end", function() {
       gulp
         .src("dist/styles.css")
-        .pipe(minifyCSS())
+        .pipe(cleanCSS())
         .pipe(rename({ suffix: ".min" }))
         .pipe(gulp.dest("dist"));
     });

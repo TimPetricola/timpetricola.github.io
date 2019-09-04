@@ -125,7 +125,7 @@ table {
 :root {
   --color-base: #5b5c5f;
   --color-back: #fff;
-  --color-brand: #2f98c1;
+  --color-brand: #027eb6;
   --color-selection: #fff;
   --color-selection-back: #27aadd;
   --color-link-underline: color(var(--color-base) l(+30%));

@@ -165,15 +165,8 @@ body {
   font-size: var(--font-size);
   line-height: var(--line-height);
   padding: var(--bu-double) var(--bu-double);
-  text-align: center;
   -webkit-font-smoothing: antialiased;
-}
-body:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-  margin-right: -0.25em;
+  display: grid;
 }
 
 a {
@@ -223,10 +216,7 @@ li a {
 }
 
 .container {
-  width: var(--line-width);
-  max-width: 100%;
+  width: 100%;
+  max-width: var(--line-width);
   margin: auto;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: left;
 }

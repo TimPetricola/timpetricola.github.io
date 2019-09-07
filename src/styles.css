@@ -185,7 +185,7 @@ a {
 a:hover {
   outline: none;
   color: color(var(--color-base) shade(40%));
-  border-color: var(--color-brand;);
+  border-color: var(--color-brand);
 }
 
 a::selection,
